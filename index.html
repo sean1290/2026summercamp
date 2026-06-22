@@ -460,6 +460,21 @@ section.tint { background: var(--cloud); }
 .feat b { color: var(--ink); font-weight: 800; }
 .feat-txt { color: var(--body); font-size: 15.5px; }
 
+/* features: photo (left) + list (right) split */
+.feat-split { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 44px; align-items: stretch; }
+.feat-photo {
+  border-radius: 22px; overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+}
+.feat-photo img { width: 100%; height: 100%; min-height: 320px; object-fit: cover; display: block; }
+.feat-split .sec-head { text-align: left; max-width: none; margin: 0 0 28px; }
+.feat-split .feat-list { max-width: none; margin: 0; }
+@media (max-width: 880px) {
+  .feat-split { grid-template-columns: 1fr; gap: 26px; }
+  .feat-photo img { min-height: 0; aspect-ratio: 16 / 10; }
+}
+
 /* ============ DAY TIMELINE ============ */
 .day-grid {
   max-width: 760px; margin: 0 auto;
@@ -951,20 +966,25 @@ footer {
 </section>
 
 <!-- ================= FEATURES ================= -->
-<section class="sec-photo" id="features">
-  <img class="sec-photo-bg" src="summer-photos/features-bg.jpg" alt="폭스러닝센터에서 활동하는 아이들">
-  <div class="sec-photo-overlay"></div>
+<section class="tint" id="features">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="sec-eyebrow">What Makes Us Different</span>
-      <h2 class="sec-title">폭스러닝센터만의 차별점</h2>
-    </div>
-    <div class="feat-list">
-      <div class="feat reveal"><span class="feat-num">01</span><span class="feat-txt"><b>SEL · PBL 기반 프로젝트형 클래스</b> — 사회정서학습과 프로젝트 기반 학습을 중심으로 구성합니다.</span></div>
-      <div class="feat reveal"><span class="feat-num">02</span><span class="feat-txt"><b>혼합 연령 · 무학년제 운영</b> — 리더십, 공감, 협력 경험을 자연스럽게 강화합니다.</span></div>
-      <div class="feat reveal"><span class="feat-num">03</span><span class="feat-txt"><b>연구소 프로그램의 통합 운영</b> — 언어, AI, 미술, SEL, 수리 등을 '미래의 나'라는 공통 주제로 융합합니다.</span></div>
-      <div class="feat reveal"><span class="feat-num">04</span><span class="feat-txt"><b>성장 결과물 공유</b> — 아이가 선택한 결과물(영상, 그림책, 음악, 발표 등)과 성장 과정을 함께 나눕니다.</span></div>
-      <div class="feat reveal"><span class="feat-num">05</span><span class="feat-txt"><b>딥러닝 학원 연계</b> — 초등 ~ 중등 내신 수학·영어 수업을 별도 신청으로 운영합니다.</span></div>
+    <div class="feat-split">
+      <div class="feat-photo reveal from-left">
+        <img src="summer-photos/features-bg.jpg" alt="폭스러닝센터에서 활동하는 아이들" loading="lazy">
+      </div>
+      <div class="reveal from-right">
+        <div class="sec-head">
+          <span class="sec-eyebrow">What Makes Us Different</span>
+          <h2 class="sec-title">폭스러닝센터만의 차별점</h2>
+        </div>
+        <div class="feat-list">
+          <div class="feat reveal"><span class="feat-num">01</span><span class="feat-txt"><b>SEL · PBL 기반 프로젝트형 클래스</b> — 사회정서학습과 프로젝트 기반 학습을 중심으로 구성합니다.</span></div>
+          <div class="feat reveal"><span class="feat-num">02</span><span class="feat-txt"><b>혼합 연령 · 무학년제 운영</b> — 리더십, 공감, 협력 경험을 자연스럽게 강화합니다.</span></div>
+          <div class="feat reveal"><span class="feat-num">03</span><span class="feat-txt"><b>연구소 프로그램의 통합 운영</b> — 언어, AI, 미술, SEL, 수리 등을 '미래의 나'라는 공통 주제로 융합합니다.</span></div>
+          <div class="feat reveal"><span class="feat-num">04</span><span class="feat-txt"><b>성장 결과물 공유</b> — 아이가 선택한 결과물(영상, 그림책, 음악, 발표 등)과 성장 과정을 함께 나눕니다.</span></div>
+          <div class="feat reveal"><span class="feat-num">05</span><span class="feat-txt"><b>딥러닝 학원 연계</b> — 초등 ~ 중등 내신 수학·영어 수업을 별도 신청으로 운영합니다.</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
