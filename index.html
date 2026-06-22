@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 내일의 나를 준비하는 여름 방학 클래스 | 폭스러닝센터</title>
+<meta name="description" content="2026년 7월 20일~8월 21일, 안전한 올데이 케어와 프로젝트 기반 활동으로 아이의 미래 핵심 역량을 설계하는 폭스러닝센터 여름방학 클래스.">
+<meta property="og:title" content="2026 내일의 나를 준비하는 여름 방학 클래스">
+<meta property="og:description" content="관찰 · 발견 · 반응 — 아이의 미래 핵심 역량을 함께 설계하는 여름. 폭스러닝센터.">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+
+:root {
+  --ink: #15184a;          /* deep indigo (headings) — 회사 브랜드 톤 */
+  --navy: #3c3e98;         /* corporate indigo (primary) */
+  --indigo-deep: #020072;  /* corporate deep navy */
+  --body: #3B4C63;
+  --mute: #7C8DA3;
+  --sky: #2E7CF6;
+  --sky-deep: #0051ff;     /* corporate vivid blue (hover) */
+  --sun: #FFC53D;
+  --cloud: #F4F8FD;
+  --line: #E3EAF3;
+  --white: #FFFFFF;
+  --radius: 18px;
+  --shadow-sm: 0 2px 10px rgba(21, 24, 74, .07);
+  --shadow-md: 0 12px 36px rgba(21, 24, 74, .12);
+  --display: 'GmarketSans', 'Noto Sans KR', sans-serif;
+  --sans: 'Noto Sans KR', 'Pretendard', -apple-system, 'Apple SD Gothic Neo', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--body);
+  background: var(--white);
+  line-height: 1.7;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* ============ NAV ============ */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow .28s ease, background .28s ease;
+}
+.nav.scrolled {
+  background: rgba(255,255,255,.97);
+  box-shadow: 0 6px 22px rgba(21, 24, 74, .09);
+  border-bottom-color: transparent;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  transition: height .28s ease;
+}
+.nav.scrolled .nav-inner { height: 56px; }
+.nav.scrolled .nav-logo img { height: 30px; transition: height .28s ease; }
+.nav-logo img { height: 34px; width: auto; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-size: 15px; font-weight: 600; color: var(--body);
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--sky); }
+.nav-cta {
+  background: var(--navy); color: #fff !important;
+  padding: 10px 20px; border-radius: 99px;
+  font-size: 14px; font-weight: 700;
+  transition: background .2s, transform .2s;
+}
+.nav-cta:hover { background: var(--sky-deep); transform: translateY(-1px); }
+@media (max-width: 880px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+}
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #FDFEFF 0%, #EFF6FF 100%);
+  padding: 90px 0 0;
+  text-align: center;
+}
+/* rising sun: signature */
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -340px;
+  transform: translateX(-50%);
+  width: 680px; height: 680px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, rgba(255,197,61,.50), rgba(255,197,61,.16) 46%, rgba(255,197,61,0) 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -390px;
+  transform: translateX(-50%);
+  width: 760px; height: 760px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(46,124,246,.28);
+  pointer-events: none;
+}
+.hero-inner { position: relative; z-index: 2; padding-bottom: 110px; }
+/* particles.js network background — 회사 사이트 시그니처 */
+#hero-particles {
+  position: absolute; inset: 0; z-index: 1;
+  pointer-events: none;
+}
+#hero-particles canvas { display: block; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 99px; padding: 8px 18px;
+  font-size: 13.5px; font-weight: 700; color: var(--navy);
+  letter-spacing: .04em;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 30px;
+}
+.hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sun); }
+
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(34px, 5.4vw, 58px);
+  line-height: 1.32;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+}
+.hero h1 .accent { color: var(--sky); }
+
+.hero-sub {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--body);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.hero-desc {
+  font-size: 16px;
+  color: var(--mute);
+  max-width: 560px;
+  margin: 0 auto 40px;
+}
+
+.hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 32px; border-radius: 99px;
+  font-size: 16.5px; font-weight: 700;
+  transition: transform .2s, box-shadow .2s, background .2s;
+  cursor: pointer; border: none; font-family: var(--sans);
+}
+.btn-primary {
+  background: var(--navy); color: #fff;
+  box-shadow: 0 8px 24px rgba(30,58,95,.25);
+}
+.btn-primary:hover { background: var(--sky-deep); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(27,95,208,.3); }
+.btn-ghost {
+  background: #fff; color: var(--navy);
+  border: 1.5px solid var(--line);
+}
+.btn-ghost:hover { border-color: var(--sky); color: var(--sky); transform: translateY(-2px); }
+
+/* hero meta cards */
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.hm-card {
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  box-shadow: var(--shadow-sm);
+}
+.hm-label {
+  font-size: 12px; font-weight: 700; color: var(--mute);
+  letter-spacing: .12em; text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.hm-value { font-size: 16.5px; font-weight: 700; color: var(--ink); line-height: 1.45; }
+.hm-value small { display: block; font-size: 13px; font-weight: 500; color: var(--mute); margin-top: 2px; }
+@media (max-width: 760px) {
+  .hero-meta { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ============ SECTIONS ============ */
+section { padding: 96px 0; }
+section.tint { background: var(--cloud); }
+
+.sec-head { text-align: center; max-width: 640px; margin: 0 auto 60px; }
+.sec-eyebrow {
+  display: inline-block;
+  font-size: 13px; font-weight: 700; color: var(--sky);
+  letter-spacing: .16em; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.sec-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(26px, 3.6vw, 38px);
+  line-height: 1.38;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+.sec-lead { margin-top: 16px; font-size: 16.5px; color: var(--mute); }
+
+/* reveal — corporate-style scroll motion (ScrollMagic 느낌) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1);
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+.reveal.in { opacity: 1; transform: none; }
+.reveal.from-left  { transform: translateX(-36px); }
+.reveal.from-right { transform: translateX(36px); }
+.reveal.zoom-in    { transform: scale(.93); }
+
+/* ============ VALUES (3 cards) ============ */
+.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.value-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s, box-shadow .25s;
+}
+.value-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.vc-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 22px;
+}
+.vc-icon svg { width: 26px; height: 26px; }
+.vc-icon.i1 { background: #EAF3FF; } .vc-icon.i1 svg { stroke: var(--sky); }
+.vc-icon.i2 { background: #FFF6DF; } .vc-icon.i2 svg { stroke: #E0A20A; }
+.vc-icon.i3 { background: #E9F9EF; } .vc-icon.i3 svg { stroke: #1FA45B; }
+.vc-title { font-size: 19.5px; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+.vc-desc { font-size: 15.5px; color: var(--body); }
+@media (max-width: 880px) { .values { grid-template-columns: 1fr; } }
+
+/* ============ JOURNEY (관찰→발견→반응) ============ */
+.journey {
+  display: grid; grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: stretch; gap: 0;
+}
+.j-step {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 38px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+.j-num {
+  font-family: var(--display);
+  font-size: 13px; font-weight: 700; color: var(--sky);
+  letter-spacing: .18em;
+  margin-bottom: 14px;
+}
+.j-name {
+  font-family: var(--display);
+  font-size: 30px; font-weight: 700; color: var(--ink);
+  margin-bottom: 14px;
+}
+.j-desc { font-size: 15px; color: var(--body); }
+.j-arrow {
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 14px;
+  color: #B9CBE3; font-size: 22px;
+}
+@media (max-width: 880px) {
+  .journey { grid-template-columns: 1fr; }
+  .j-arrow { transform: rotate(90deg); padding: 8px 0; }
+}
+
+/* ============ COMPETENCIES 2x2 ============ */
+.comps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.comp {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+.comp-ic {
+  flex: 0 0 46px; height: 46px; border-radius: 12px;
+  background: var(--cloud);
+  display: flex; align-items: center; justify-content: center;
+}
+.comp-ic svg { width: 23px; height: 23px; stroke: var(--navy); }
+.comp h3 { font-size: 17.5px; font-weight: 800; color: var(--ink); margin-bottom: 6px; }
+.comp p { font-size: 15px; color: var(--body); }
+@media (max-width: 760px) { .comps { grid-template-columns: 1fr; } }
+
+/* ============ FEATURES (chips list) ============ */
+.feat-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+.feat {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 14px; padding: 22px 26px;
+}
+.feat-num {
+  font-family: var(--display);
+  font-size: 15px; font-weight: 700; color: var(--sky);
+  padding-top: 2px; min-width: 30px;
+}
+.feat b { color: var(--ink); font-weight: 800; }
+.feat span { color: var(--body); font-size: 15.5px; }
+
+/* ============ DAY TIMELINE ============ */
+.day-grid {
+  max-width: 760px; margin: 0 auto;
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.day-row {
+  display: grid; grid-template-columns: 170px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+.day-row:last-child { border-bottom: none; }
+.day-time {
+  background: var(--cloud);
+  padding: 16px 22px;
+  font-weight: 700; color: var(--navy);
+  font-variant-numeric: tabular-nums;
+  font-size: 15.5px;
+  white-space: nowrap;
+}
+.day-act { padding: 16px 24px; font-size: 16px; color: var(--body); }
+.day-act b { color: var(--ink); font-weight: 700; }
+.day-row.hl .day-act { background: #FFFBEE; }
+@media (max-width: 600px) {
+  .day-row { grid-template-columns: 128px 1fr; }
+  .day-time { padding: 14px 14px; font-size: 14px; }
+  .day-act { padding: 14px 16px; font-size: 15px; }
+}
+
+/* ============ KEY DATES timeline ============ */
+.dates { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.date-card {
+  background: #fff; border: 1px solid var(--line);
+  border-top: 4px solid var(--sky);
+  border-radius: 14px; padding: 26px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.date-card.sun { border-top-color: var(--sun); }
+.dc-when {
+  font-family: var(--display);
+  font-size: 15px; font-weight: 700; color: var(--sky);
+  margin-bottom: 10px;
+}
+.date-card.sun .dc-when { color: #E0A20A; }
+.dc-name { font-size: 18px; font-weight: 800; color: var(--ink); margin-bottom: 8px; }
+.dc-desc { font-size: 14.5px; color: var(--mute); }
+@media (max-width: 880px) { .dates { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .dates { grid-template-columns: 1fr; } }
+
+/* ============ GALLERY ============ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.g-item {
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  position: relative;
+}
+.g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.g-item:hover img { transform: scale(1.05); }
+.g-item.ph {
+  display: flex; flex-direction: column; gap: 8px;
+  align-items: center; justify-content: center;
+  border-style: dashed; border-color: #C9D8EA;
+  color: var(--mute); font-size: 13.5px; font-weight: 600;
+}
+.g-item.ph svg { width: 28px; height: 28px; stroke: #B9CBE3; }
+@media (max-width: 880px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+
+/* ============ CARE strip ============ */
+.care { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.care-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 30px 28px;
+  box-shadow: var(--shadow-sm);
+}
+.care-card .cc-ic {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.cc-ic.bus { background: #FFF6DF; } .cc-ic.bus svg { stroke: #E0A20A; }
+.cc-ic.meal { background: #E9F9EF; } .cc-ic.meal svg { stroke: #1FA45B; }
+.cc-ic.safe { background: #EAF3FF; } .cc-ic.safe svg { stroke: var(--sky); }
+.cc-ic svg { width: 24px; height: 24px; }
+.care-card h3 { font-size: 18px; font-weight: 800; color: var(--ink); margin-bottom: 8px; }
+.care-card p { font-size: 15px; color: var(--body); }
+@media (max-width: 880px) { .care { grid-template-columns: 1fr; } }
+
+/* ============ APPLY ============ */
+.apply {
+  background: linear-gradient(135deg, var(--navy) 0%, #16314F 60%, #122A45 100%);
+  border-radius: 28px;
+  padding: 70px 40px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.apply::before {
+  content: '';
+  position: absolute; right: -120px; top: -120px;
+  width: 340px; height: 340px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,197,61,.22), transparent 70%);
+}
+.apply-eyebrow {
+  font-size: 13px; font-weight: 700; letter-spacing: .16em;
+  color: var(--sun); text-transform: uppercase; margin-bottom: 16px;
+}
+.apply h2 {
+  font-family: var(--display);
+  font-size: clamp(26px, 3.4vw, 36px);
+  font-weight: 700; line-height: 1.4;
+  margin-bottom: 18px;
+}
+.apply .price {
+  font-family: var(--display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700; color: var(--sun);
+  margin-bottom: 6px;
+}
+.apply .price small { font-size: 16px; color: rgba(255,255,255,.75); font-family: var(--sans); font-weight: 500; }
+.apply-note { font-size: 15px; color: rgba(255,255,255,.72); margin-bottom: 36px; }
+.apply-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+.btn-sun {
+  background: var(--sun); color: var(--ink);
+  box-shadow: 0 8px 24px rgba(255,197,61,.35);
+}
+.btn-sun:hover { background: #FFD25E; transform: translateY(-2px); }
+.btn-line {
+  background: transparent; color: #fff;
+  border: 1.5px solid rgba(255,255,255,.4);
+}
+.btn-line:hover { border-color: #fff; transform: translateY(-2px); }
+.apply-contact { font-size: 15px; color: rgba(255,255,255,.85); }
+.apply-contact b { color: #fff; }
+
+/* ============ FOOTER ============ */
+footer {
+  padding: 54px 0 40px;
+  border-top: 1px solid var(--line);
+  font-size: 14.5px;
+  color: var(--mute);
+}
+.foot-grid {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 30px; flex-wrap: wrap; margin-bottom: 30px;
+}
+.foot-grid img { height: 30px; margin-bottom: 14px; }
+.foot-copy { font-size: 13px; color: #A9B7C8; }
+
+/* ============ SECTION WITH PHOTO BACKGROUND ============ */
+.sec-photo { position: relative; overflow: hidden; }
+.sec-photo > .wrap { position: relative; z-index: 2; }
+.sec-photo-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.sec-photo-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(16,42,67,.88) 0%, rgba(16,42,67,.78) 50%, rgba(16,42,67,.9) 100%),
+    radial-gradient(110% 80% at 50% 0%, rgba(46,124,246,.28), transparent 60%);
+  pointer-events: none;
+}
+.sec-photo .sec-eyebrow { color: var(--sun); }
+.sec-photo .sec-title { color: #fff; }
+.sec-photo .sec-lead { color: rgba(255,255,255,.8); }
+
+/* ============ JOURNEY STEP PHOTOS ============ */
+.j-photo {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 1px solid var(--line);
+  background: var(--cloud);
+}
+.j-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.j-step:hover .j-photo img { transform: scale(1.04); }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="#top" aria-label="FOX LC 홈">
+      <img src="https://freddy1590.github.io/fox-global-camp-2026/logos/logo_1.png" alt="FOX LC">
+    </a>
+    <div class="nav-links">
+      <a href="#value">핵심 가치</a>
+      <a href="#journey">성장 구조</a>
+      <a href="#day">하루 일과</a>
+      <a href="#dates">주요 일정</a>
+      <a href="#gallery">지난 이야기</a>
+      <a href="#apply" class="nav-cta">신청 문의</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div id="hero-particles"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-badge"><span class="dot"></span>FOX LEARNING CENTER · 2026 SUMMER</div>
+    <h1>내일의 나를 준비하는<br><span class="accent">여름 방학 클래스</span></h1>
+    <p class="hero-sub">관찰 · 발견 · 반응 — 아이의 미래 핵심 역량을 함께 설계하는 여름</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#apply">신청 안내 보기</a>
+      <a class="btn btn-ghost" href="tel:14332700">전화 문의 1433-2700</a>
+    </div>
+    <div class="hero-meta">
+      <div class="hm-card">
+        <div class="hm-label">기간</div>
+        <div class="hm-value">7. 20 — 8. 21<small>총 5주 · 주 5일</small></div>
+      </div>
+      <div class="hm-card">
+        <div class="hm-label">운영 시간</div>
+        <div class="hm-value">09:00 — 19:00<small>올데이 케어</small></div>
+      </div>
+      <div class="hm-card">
+        <div class="hm-label">대상</div>
+        <div class="hm-value">6세 이상<small>무학년제 운영</small></div>
+      </div>
+      <div class="hm-card">
+        <div class="hm-label">장소</div>
+        <div class="hm-value">폭스러닝센터<small>골프존 조이마루 2층</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= VALUES ================= -->
+<section id="value" class="sec-photo">
+  <img class="sec-photo-bg" src="summer-photos/hero.jpg" alt="폭스러닝센터에서 즐겁게 활동하는 아이들">
+  <div class="sec-photo-overlay"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">For Parents</span>
+      <h2 class="sec-title">여름방학,<br>이것만큼은 확실하게</h2>
+    </div>
+    <div class="values">
+      <div class="value-card reveal">
+        <div class="vc-icon i1">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="vc-title">안전한 올데이 케어</h3>
+        <p class="vc-desc">오전 9시부터 저녁 7시까지, 한 공간에서 돌봄과 학습 활동이 자연스럽게 이어집니다.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="vc-icon i2">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6M15 6v6M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></svg>
+        </div>
+        <h3 class="vc-title">이동 부담 최소화</h3>
+        <p class="vc-desc">노란버스 정규 노선으로 등하원을 지원해 학부모님의 개별 이동 부담을 줄여드립니다.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="vc-icon i3">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+        </div>
+        <h3 class="vc-title">눈에 보이는 성장</h3>
+        <p class="vc-desc">여름의 끝, 아이가 직접 만든 결과물과 '성장 이야기'를 학부모님과 함께 나눕니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="tint" id="journey">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Growth Structure</span>
+      <h2 class="sec-title">아이의 여름은<br>세 단계로 흐릅니다</h2>
+      <p class="sec-lead">세상을 바라보고, 자신을 발견하고, 자기만의 언어로 반응합니다.</p>
+    </div>
+    <div class="journey">
+      <div class="j-step reveal">
+        <div class="j-photo"><img src="summer-photos/journey-observe.jpg" alt="작품을 집중해서 관찰하며 작업하는 아이" loading="lazy"></div>
+        <div class="j-num">STEP 01</div>
+        <div class="j-name">관찰</div>
+        <p class="j-desc">자신과 주변 세상을 주의 깊게 바라보고, 호기심을 갖는 힘을 기릅니다.</p>
+      </div>
+      <div class="j-arrow">→</div>
+      <div class="j-step reveal">
+        <div class="j-photo"><img src="summer-photos/journey-discover.jpg" alt="빛과 색을 탐색하며 발견하는 아이" loading="lazy"></div>
+        <div class="j-num">STEP 02</div>
+        <div class="j-name">발견</div>
+        <p class="j-desc">그림 · 글 · 사진 · 영상 등 다양한 도구로 자신의 관심과 가능성을 찾습니다.</p>
+      </div>
+      <div class="j-arrow">→</div>
+      <div class="j-step reveal">
+        <div class="j-photo"><img src="summer-photos/journey-express.jpg" alt="자신의 생각을 발표 자료로 반응하고 나누는 아이들" loading="lazy"></div>
+        <div class="j-num">STEP 03</div>
+        <div class="j-name">반응</div>
+        <p class="j-desc">발견한 생각과 미래의 모습을 자기만의 방식으로 반응하고 나눕니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPETENCIES ================= -->
+<section id="comps">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Core Competencies</span>
+      <h2 class="sec-title">아이가 성장하는 4대 역량</h2>
+      <p class="sec-lead">모든 활동은 아이가 평생 가져갈 네 가지 역량을 길러내는 과정으로 설계됩니다.</p>
+    </div>
+    <div class="comps">
+      <div class="comp reveal">
+        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div>
+        <div><h3>자기 이해 · 자기주도성</h3><p>내가 어떤 사람이 되고 싶은지 스스로 그려보는 힘을 기릅니다.</p></div>
+      </div>
+      <div class="comp reveal">
+        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.8.7 1.4 1.5 1.6 2.3h4.8c.2-.8.8-1.6 1.6-2.3A7 7 0 0 0 12 2z"/></svg></div>
+        <div><h3>창의적 문제 해결</h3><p>정답이 없는 프로젝트에 사고하고 시도하는 경험을 쌓습니다.</p></div>
+      </div>
+      <div class="comp reveal">
+        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div><h3>사회정서 역량 (SEL)</h3><p>또래와 협력하고 자신의 감정을 다루는 방법을 익힙니다.</p></div>
+      </div>
+      <div class="comp reveal">
+        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m9 8 3 3 3-3"/></svg></div>
+        <div><h3>디지털 · 표현 리터러시</h3><p>다양한 도구로 생각을 시각화하고 전달하는 능력을 키웁니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="tint" id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">What Makes Us Different</span>
+      <h2 class="sec-title">폭스러닝센터만의 차별점</h2>
+    </div>
+    <div class="feat-list">
+      <div class="feat reveal"><span class="feat-num">01</span><span><b>SEL · PBL 기반 프로젝트형 클래스</b> — 사회정서학습과 프로젝트 기반 학습을 중심으로 구성합니다.</span></div>
+      <div class="feat reveal"><span class="feat-num">02</span><span><b>혼합 연령 · 무학년제 운영</b> — 리더십, 공감, 협력 경험을 자연스럽게 강화합니다.</span></div>
+      <div class="feat reveal"><span class="feat-num">03</span><span><b>연구소 프로그램의 통합 운영</b> — 언어, AI, 미술, SEL, 수리 등을 '미래의 나'라는 공통 주제로 융합합니다.</span></div>
+      <div class="feat reveal"><span class="feat-num">04</span><span><b>성장 결과물 공유</b> — 아이가 선택한 결과물(영상, 그림책, 음악, 발표 등)과 성장 과정을 함께 나눕니다.</span></div>
+      <div class="feat reveal"><span class="feat-num">05</span><span><b>딥러닝 학원 연계</b> — 초등 ~ 중등 내신 수학·영어 수업을 별도 신청으로 운영합니다.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY SCHEDULE ================= -->
+<section id="day">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">A Day at FOX</span>
+      <h2 class="sec-title">하루 일과 예시</h2>
+      <p class="sec-lead">아침 등원부터 저녁 케어까지, 하루가 이렇게 흘러갑니다.</p>
+    </div>
+    <div class="day-grid reveal">
+      <div class="day-row"><div class="day-time">09:00 – 10:00</div><div class="day-act">틈새 활동</div></div>
+      <div class="day-row"><div class="day-time">10:00 – 11:30</div><div class="day-act"><b>AI · 영어 · SEL · 미술 활동</b></div></div>
+      <div class="day-row"><div class="day-time">11:30 – 12:00</div><div class="day-act">틈새 활동</div></div>
+      <div class="day-row hl"><div class="day-time">12:00 – 13:00</div><div class="day-act">점심</div></div>
+      <div class="day-row hl"><div class="day-time">13:00 – 14:00</div><div class="day-act">비타민 케어</div></div>
+      <div class="day-row"><div class="day-time">14:00 – 15:30</div><div class="day-act"><b>AI · 영어 · SEL · 미술 활동</b></div></div>
+      <div class="day-row"><div class="day-time">15:30 – 17:00</div><div class="day-act"><b>AI · 영어 · SEL · 미술 활동</b></div></div>
+      <div class="day-row"><div class="day-time">17:00 – 18:30</div><div class="day-act"><b>AI · 영어 · SEL · 미술 활동</b></div></div>
+      <div class="day-row"><div class="day-time">18:30 – 19:00</div><div class="day-act">저녁 케어 및 자율 활동</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KEY DATES ================= -->
+<section class="tint" id="dates">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Key Dates</span>
+      <h2 class="sec-title">한눈에 보는 주요 일정</h2>
+    </div>
+    <div class="dates">
+      <div class="date-card reveal">
+        <div class="dc-when">7. 1 — 7. 16</div>
+        <div class="dc-name">해피 클래스</div>
+        <p class="dc-desc">사전 상담 및 추천 프로그램 매칭 · 체험 클래스 운영</p>
+      </div>
+      <div class="date-card reveal">
+        <div class="dc-when">7. 20 — 8. 21</div>
+        <div class="dc-name">본 프로그램</div>
+        <p class="dc-desc">총 5주 · 주 5일 또는 프로젝트별(주 2회) 신청 가능</p>
+      </div>
+      <div class="date-card sun reveal">
+        <div class="dc-when">8. 7 (금)</div>
+        <div class="dc-name">폭스 흠뻑 페스티벌</div>
+        <p class="dc-desc">조이마루 분수대 물놀이 · 빵 · 치킨 · 영화 · 미술 활동</p>
+      </div>
+      <div class="date-card reveal">
+        <div class="dc-when">추후 안내</div>
+        <div class="dc-name">폭스 페어</div>
+        <p class="dc-desc">영화 프로젝트 상영 · 각 연구소 발표 · 수료식</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Moments</span>
+      <h2 class="sec-title">폭스의 여름,<br>지난 이야기</h2>
+      <p class="sec-lead">아이들이 직접 만들고, 웃고, 성장했던 순간들입니다.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="g-item"><img src="summer-photos/gallery-1.jpg" alt="선생님과 함께 읽고 이야기 나누는 수업" loading="lazy"></div>
+      <div class="g-item"><img src="summer-photos/gallery-2.jpg" alt="친구들과 함께하는 협력 게임 활동" loading="lazy"></div>
+      <div class="g-item"><img src="summer-photos/gallery-3.jpg" alt="캔버스에 그림을 그리는 미술 활동" loading="lazy"></div>
+      <div class="g-item"><img src="summer-photos/gallery-4.jpg" alt="직접 만든 로봇을 보여주는 아이" loading="lazy"></div>
+      <div class="g-item"><img src="summer-photos/gallery-5.jpg" alt="태블릿과 블록으로 코딩하는 아이" loading="lazy"></div>
+      <div class="g-item"><img src="summer-photos/gallery-6.jpg" alt="선생님을 중심으로 둘러앉은 아이들" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CARE ================= -->
+<section class="tint" id="care">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Care &amp; Safety</span>
+      <h2 class="sec-title">케어 · 차량 · 식사</h2>
+    </div>
+    <div class="care">
+      <div class="care-card reveal">
+        <div class="cc-ic bus"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6v6M15 6v6M2 12h19.6"/><path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3"/><circle cx="7" cy="18" r="2"/><path d="M9 18h5"/><circle cx="16" cy="18" r="2"/></svg></div>
+        <h3>노란버스 등하원</h3>
+        <p>정규 노선을 운영하며, 주요 학교와 아파트 중심으로 정류장을 구성합니다. <small style="color:var(--mute);">(차량비 별도)</small></p>
+      </div>
+      <div class="care-card reveal">
+        <div class="cc-ic meal"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div>
+        <h3>건강한 식사와 간식</h3>
+        <p>건강식 중심의 점심을 제공하고, 간식과 여름 비타민(빵, 과일컵 등)을 포함합니다.</p>
+      </div>
+      <div class="care-card reveal">
+        <div class="cc-ic safe"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>안전 매뉴얼 운영</h3>
+        <p>출결, 버스 탑승, 하원 확인 절차를 매뉴얼화 하여 빈틈없이 운영합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLY ================= -->
+<section id="apply">
+  <div class="wrap">
+    <div class="apply reveal">
+      <div class="apply-eyebrow">2026 Summer · 선착순 모집</div>
+      <h2>이번 여름, 아이가 스스로의 가능성을<br>발견하는 시간을 선물하세요</h2>
+      <div class="price">1,485,000원 <small>· 5주 풀 참여 기준</small></div>
+      <p class="apply-note">주차(2~5주)에 따라 차등 책정 · 최소 2주 이상 신청 가능 · 차량비 별도<br>모집 기간: 2026년 6~7월 중 선착순 접수 (정원 마감 시 조기 마감)</p>
+      <div class="apply-ctas">
+        <a class="btn btn-sun" href="tel:14332700">전화로 신청하기</a>
+        <a class="btn btn-line" href="https://pf.kakao.com" target="_blank" rel="noopener">카톡 FOX_LC 문의</a>
+      </div>
+      <p class="apply-contact">전화 <b>1433-2700</b> · 카톡 <b>FOX_LC</b> · 골프존 조이마루 2층, 폭스러닝센터</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="https://freddy1590.github.io/fox-global-camp-2026/logos/logo_1.png" alt="FOX LC">
+        <p>관찰 · 발견 · 반응 — 아이의 미래 핵심 역량을<br>함께 설계하는 여름방학 클래스.</p>
+      </div>
+      <div>
+        <p><b style="color:var(--ink);">문의</b><br>전화 1433-2700<br>카톡 FOX_LC</p>
+      </div>
+      <div>
+        <p><b style="color:var(--ink);">위치</b><br>골프존 조이마루 2층,<br>폭스러닝센터</p>
+      </div>
+    </div>
+    <p class="foot-copy">© 2026 (주)폭스커넥트 · Fox Learning Center. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// --- staggered scroll reveal (회사 사이트의 순차 등장 느낌) ---
+// 그리드/리스트 안의 reveal 카드에 인덱스 기반 지연을 부여
+document.querySelectorAll('.values, .journey, .comps, .feat-list, .dates, .gallery, .care, .hero-meta').forEach(group => {
+  let idx = 0;
+  [...group.children].forEach(child => {
+    if (child.classList.contains('reveal')) {
+      child.style.setProperty('--reveal-delay', (idx * 0.09).toFixed(2) + 's');
+      idx++;
+    }
+  });
+});
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// --- sticky header: scroll 시 축소 + 그림자 ---
+const navEl = document.querySelector('.nav');
+const onNavScroll = () => navEl.classList.toggle('scrolled', window.scrollY > 80);
+window.addEventListener('scroll', onNavScroll, { passive: true });
+onNavScroll();
+
+// --- particles.js network hero background ---
+if (!reduceMotion && window.particlesJS) {
+  particlesJS('hero-particles', {
+    particles: {
+      number: { value: 48, density: { enable: true, value_area: 900 } },
+      color: { value: ['#3c3e98', '#2E7CF6', '#FFC53D'] },
+      shape: { type: 'circle' },
+      opacity: { value: 0.4, random: true },
+      size: { value: 3, random: true },
+      line_linked: { enable: true, distance: 145, color: '#9fb1d8', opacity: 0.38, width: 1 },
+      move: { enable: true, speed: 1.1, direction: 'none', random: true, out_mode: 'out' }
+    },
+    interactivity: { detect_on: 'canvas', events: { onhover: { enable: false }, onclick: { enable: false }, resize: true } },
+    retina_detect: true
+  });
+}
+
+// gallery: graceful placeholder when photo file is missing
+document.querySelectorAll('.g-item img').forEach(img => {
+  img.addEventListener('error', () => {
+    const cell = img.parentElement;
+    cell.classList.add('ph');
+    cell.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>사진 준비 중</span>';
+  });
+});
+</script>
+
+</body>
+</html>
