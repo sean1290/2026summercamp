@@ -425,6 +425,14 @@ section.tint { background: var(--cloud); }
 .lab-head .lab-ic svg { width: 21px; height: 21px; stroke: #fff; }
 .lab-head h3 { font-family: var(--display); font-size: 16.5px; font-weight: 700; color: #fff; }
 .lab-body { padding: 22px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+.lab-photo {
+  aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid color-mix(in srgb, var(--accent) 18%, #fff);
+  background: color-mix(in srgb, var(--accent) 8%, #fff);
+}
+.lab-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+.lab:hover .lab-photo img { transform: scale(1.05); }
 .lab-prog { font-size: 16.5px; font-weight: 800; color: color-mix(in srgb, var(--accent) 58%, var(--ink)); margin-bottom: 10px; }
 .lab-body p { font-size: 14.5px; color: var(--body); }
 .lab-meta { margin-top: auto; padding-top: 14px; }
@@ -743,7 +751,7 @@ footer {
       </div>
       <div class="hm-card">
         <div class="hm-label">운영 시간</div>
-        <div class="hm-value">09:30 — 19:00<small>올데이 케어 · 점심·간식 포함</small></div>
+        <div class="hm-value">09:30 — 19:00<small>올데이 케어 · 아침·점심·간식 포함</small></div>
       </div>
       <div class="hm-card">
         <div class="hm-label">대상</div>
@@ -825,41 +833,9 @@ footer {
   </div>
 </section>
 
-<!-- ================= COMPETENCIES ================= -->
-<section id="comps">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="sec-eyebrow">Core Competencies</span>
-      <h2 class="sec-title">아이가 성장하는 4대 역량</h2>
-      <p class="sec-lead">모든 활동은 아이가 평생 가져갈 네 가지 역량을 길러내는 과정으로 설계됩니다.</p>
-    </div>
-    <div class="comps">
-      <div class="comp reveal" style="--accent:#2E7CF6;">
-        <span class="comp-idx">01</span>
-        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div>
-        <h3>자기 이해 · 자기주도성</h3><p>내가 어떤 사람이 되고 싶은지 스스로 그려보는 힘을 기릅니다.</p>
-      </div>
-      <div class="comp reveal" style="--accent:#E0A20A;">
-        <span class="comp-idx">02</span>
-        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.8.7 1.4 1.5 1.6 2.3h4.8c.2-.8.8-1.6 1.6-2.3A7 7 0 0 0 12 2z"/></svg></div>
-        <h3>창의적 문제 해결</h3><p>정답이 없는 프로젝트에 사고하고 시도하는 경험을 쌓습니다.</p>
-      </div>
-      <div class="comp reveal" style="--accent:#1FA45B;">
-        <span class="comp-idx">03</span>
-        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <h3>사회정서 역량 (SEL)</h3><p>또래와 협력하고 자신의 감정을 다루는 방법을 익힙니다.</p>
-      </div>
-      <div class="comp reveal" style="--accent:#6C5CE7;">
-        <span class="comp-idx">04</span>
-        <div class="comp-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m9 8 3 3 3-3"/></svg></div>
-        <h3>디지털 · 표현 리터러시</h3><p>다양한 도구로 생각을 시각화하고 전달하는 능력을 키웁니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ================= MAIN PROGRAMS ================= -->
-<section class="tint" id="programs">
+<section id="programs">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">Main Programs</span>
@@ -892,7 +868,7 @@ footer {
 </section>
 
 <!-- ================= RESEARCH LABS ================= -->
-<section id="labs">
+<section class="tint" id="labs">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">Research Labs</span>
@@ -906,6 +882,7 @@ footer {
           <h3>SEL 연구소</h3>
         </div>
         <div class="lab-body">
+          <div class="lab-photo"><img src="summer-photos/lab-sel.jpg" alt="SEL 연구소 마음 연결 SEL 활동" loading="lazy"></div>
           <div class="lab-prog">마음 연결 SEL</div>
           <p>단단한 나, 유연한 너, 약속하는 우리. 나를 알고 너를 이해하며 우리를 만들어가는 사회정서학습 프로그램입니다. 감정 이해·조절, 공감·소통, 협력 활동을 통해 건강한 자존감과 따뜻한 관계 맺기 능력을 기릅니다.</p>
         </div>
@@ -916,6 +893,7 @@ footer {
           <h3>미술 연구소</h3>
         </div>
         <div class="lab-body">
+          <div class="lab-photo"><img src="summer-photos/lab-art.jpg" alt="미술 연구소 디지털 아트 스튜디오 활동" loading="lazy"></div>
           <div class="lab-prog">DRAW &amp; MAKE · 디지털 아트 스튜디오</div>
           <p>태블릿과 디지털 드로잉 도구를 활용해 그림을 그리고 스티커·엽서·굿즈 등 다양한 형태로 제작합니다. 자유롭게 아이디어를 표현하고 자신만의 캐릭터와 작품을 완성하며 창의력과 디자인 감각을 키웁니다.</p>
         </div>
@@ -926,6 +904,7 @@ footer {
           <h3>수리 연구소</h3>
         </div>
         <div class="lab-body">
+          <div class="lab-photo"><img src="summer-photos/lab-math.jpg" alt="수리 연구소 플레이팩토 활동" loading="lazy"></div>
           <div class="lab-prog">플레이팩토</div>
           <p>교구와 놀이 중심 활동으로 수학을 어렵지 않게 접근하며, 수·연산·도형·규칙 등 기초 개념을 자연스럽게 이해합니다. 사고 과정과 탐구 경험을 중요하게 다루며 논리적 사고력·집중력·문제 해결력을 함께 기릅니다.</p>
         </div>
@@ -936,6 +915,7 @@ footer {
           <h3>AI 연구소</h3>
         </div>
         <div class="lab-body">
+          <div class="lab-photo"><img src="summer-photos/lab-ai.jpg" alt="AI 연구소 파이썬 기초 활동" loading="lazy"></div>
           <div class="lab-prog">파이썬 기초</div>
           <p>AI 시대의 기초 언어인 파이썬을 활용하여 코드를 직접 작성하고 실행합니다. 컴퓨터와 소통하는 방법을 익히며 논리적 사고력을 기릅니다.</p>
         </div>
@@ -946,6 +926,7 @@ footer {
           <h3>언어 연구소</h3>
         </div>
         <div class="lab-body">
+          <div class="lab-photo"><img src="summer-photos/lab-lang.jpg" alt="언어 연구소 디베이트 클럽 활동" loading="lazy"></div>
           <div class="lab-prog">디베이트 클럽</div>
           <p>주어진 주제를 조사하고 찬반 입장을 선택한 뒤 논거를 구성하여 발표합니다. 영어적 비판적 사고와 표현력을 기르며 깊이 있는 영어 스피킹과 리스닝을 학습합니다.</p>
         </div>
@@ -956,6 +937,7 @@ footer {
           <h3>아이사랑 태권도</h3>
         </div>
         <div class="lab-body">
+          <div class="lab-photo"><img src="summer-photos/lab-taekwondo.jpg" alt="아이사랑 태권도 클래스 활동" loading="lazy"></div>
           <div class="lab-prog">태권도 클래스</div>
           <p>체력과 자신감을 함께 키우는 태권도 수업입니다. 기본기를 바탕으로 예절과 집중력, 끈기를 기릅니다.</p>
           <div class="lab-meta"><span class="lm">기간 8월 1~3주 · 매주 화 · 목 11:20~12:10<br>5명 이상 신청 시 진행 · 문의 010-2412-5853</span></div>
@@ -966,7 +948,7 @@ footer {
 </section>
 
 <!-- ================= FEATURES ================= -->
-<section class="tint" id="features">
+<section id="features">
   <div class="wrap">
     <div class="feat-split">
       <div class="feat-photo reveal from-left">
@@ -990,7 +972,7 @@ footer {
 </section>
 
 <!-- ================= DAY SCHEDULE ================= -->
-<section id="day">
+<section class="tint" id="day">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">A Day at FOX</span>
@@ -1012,7 +994,7 @@ footer {
 </section>
 
 <!-- ================= KEY DATES ================= -->
-<section class="tint" id="dates">
+<section id="dates">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">Key Dates</span>
@@ -1048,7 +1030,7 @@ footer {
 </section>
 
 <!-- ================= GALLERY ================= -->
-<section id="gallery">
+<section class="tint" id="gallery">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">Moments</span>
@@ -1067,7 +1049,7 @@ footer {
 </section>
 
 <!-- ================= CARE ================= -->
-<section class="tint" id="care">
+<section id="care">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-eyebrow">Care &amp; Safety</span>
