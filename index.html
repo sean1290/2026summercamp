@@ -581,8 +581,44 @@ section.tint { background: var(--cloud); }
   border: 1px solid var(--line);
   position: relative;
 }
+.g-item { cursor: pointer; }
 .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
 .g-item:hover img { transform: scale(1.05); }
+.g-item::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(16,42,67,0) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3M11 8v6M8 11h6'/%3E%3C/svg%3E") center no-repeat;
+  opacity: 0; transition: opacity .25s, background-color .25s;
+  pointer-events: none;
+}
+.g-item:hover::after { opacity: 1; background-color: rgba(16,42,67,.32); }
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(10,18,30,.86);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  opacity: 0; visibility: hidden; transition: opacity .28s, visibility .28s;
+  padding: 28px;
+}
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox img {
+  max-width: 92vw; max-height: 88vh;
+  width: auto; height: auto;
+  border-radius: 14px; box-shadow: 0 24px 60px rgba(0,0,0,.5);
+  transform: scale(.95); transition: transform .28s cubic-bezier(.16,1,.3,1);
+}
+.lightbox.open img { transform: scale(1); }
+.lb-close {
+  position: absolute; top: 22px; right: 26px;
+  width: 46px; height: 46px; border-radius: 50%;
+  border: none; cursor: pointer;
+  background: rgba(255,255,255,.14); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.lb-close:hover { background: rgba(255,255,255,.28); }
+.lb-close svg { width: 24px; height: 24px; stroke: #fff; }
 .g-item.ph {
   display: flex; flex-direction: column; gap: 8px;
   align-items: center; justify-content: center;
@@ -1114,6 +1150,12 @@ footer {
   </div>
 </footer>
 
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+  <button class="lb-close" id="lbClose" aria-label="닫기"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <img id="lbImg" src="" alt="">
+</div>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1166,6 +1208,29 @@ document.querySelectorAll('.g-item img').forEach(img => {
     cell.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>사진 준비 중</span>';
   });
 });
+
+// --- lightbox: click gallery photo to view large ---
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbClose = document.getElementById('lbClose');
+function openLightbox(src, alt) {
+  lbImg.src = src; lbImg.alt = alt || '';
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.querySelectorAll('.gallery .g-item').forEach(cell => {
+  cell.addEventListener('click', () => {
+    const img = cell.querySelector('img');
+    if (img && !cell.classList.contains('ph')) openLightbox(img.src, img.alt);
+  });
+});
+lbClose.addEventListener('click', closeLightbox);
+lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox(); });
 </script>
 
 </body>
