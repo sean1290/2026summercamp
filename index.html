@@ -187,6 +187,9 @@ ul { list-style: none; }
 }
 
 .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 56px; }
+.hero-ctas.tight { margin-bottom: 18px; }
+.hero-contact { margin: 0 0 48px; font-size: 16px; color: var(--body); line-height: 1.85; }
+.hero-contact b { display: inline-block; font-size: 13px; font-weight: 800; letter-spacing: .04em; color: var(--sky); margin-bottom: 2px; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 16px 32px; border-radius: 99px;
@@ -786,10 +789,10 @@ footer {
     <h1>내일의 나를 준비하는<br><span class="accent">여름 방학 클래스</span></h1>
     <p class="hero-sub">관찰 · 발견 · 반응 — 아이의 미래 핵심 역량을 함께 설계하는 여름</p>
     <p class="hero-desc">폭스에서 더 높이, 더 시원하게 성장하자.<br>지루할 틈 없는 폭스의 여름, 더 넓은 세상으로.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary" href="#apply">신청 안내 보기</a>
-      <a class="btn btn-ghost" href="tel:14332700">전화 문의 1433-2700</a>
+    <div class="hero-ctas tight">
+      <a class="btn btn-primary" href="https://m.site.naver.com/29w6K" target="_blank" rel="noopener">신청 안내 보기</a>
     </div>
+    <p class="hero-contact"><b>신청문의</b><br>📞 1433-2700<br>카카오톡 ID: Fox_LC</p>
     <div class="hero-meta">
       <div class="hm-card">
         <div class="hm-label">기간</div>
@@ -1002,11 +1005,11 @@ footer {
       <p class="sec-lead">아침 등원부터 저녁 케어까지, 하루가 이렇게 흘러갑니다.</p>
     </div>
     <div class="day-grid reveal">
-      <div class="day-row"><div class="day-time">09:00 – 10:00</div><div class="day-act" style="--cat:#B9CBE3;--tagbg:#F1F5FA;">틈새 활동<span class="day-tag">틈새</span></div></div>
+      <div class="day-row"><div class="day-time">09:30 – 10:00</div><div class="day-act" style="--cat:#B9CBE3;--tagbg:#F1F5FA;">틈새 활동 · 활동계획 작성<span class="day-tag">틈새</span></div></div>
       <div class="day-row"><div class="day-time">10:00 – 11:30</div><div class="day-act" style="--cat:#2E7CF6;--tagbg:#EAF3FF;"><b>AI · 영어 · SEL · 미술 활동</b><span class="day-tag">메인 활동</span></div></div>
-      <div class="day-row"><div class="day-time">11:30 – 12:00</div><div class="day-act" style="--cat:#D6336C;--tagbg:#FCE4EC;"><b>태권도</b><span class="day-tag">태권도</span></div></div>
-      <div class="day-row"><div class="day-time">12:00 – 13:00</div><div class="day-act" style="--cat:#E0A20A;--tagbg:#FFF6DF;">점심<span class="day-tag">식사</span></div></div>
-      <div class="day-row"><div class="day-time">13:00 – 14:00</div><div class="day-act" style="--cat:#1FA45B;--tagbg:#E9F9EF;">비타민 케어<span class="day-tag">케어</span></div></div>
+      <div class="day-row"><div class="day-time">11:20 – 12:10</div><div class="day-act" style="--cat:#D6336C;--tagbg:#FCE4EC;"><b>태권도</b><span class="day-tag">태권도</span></div></div>
+      <div class="day-row"><div class="day-time">11:30 – 12:30</div><div class="day-act" style="--cat:#2E7CF6;--tagbg:#EAF3FF;"><b>AI · 영어 · SEL · 미술 활동</b><span class="day-tag">메인 활동</span></div></div>
+      <div class="day-row"><div class="day-time">12:30 – 14:00</div><div class="day-act" style="--cat:#E0A20A;--tagbg:#FFF6DF;">점심 및 비타민 케어<span class="day-tag">식사 · 케어</span></div></div>
       <div class="day-row"><div class="day-time">14:00 – 15:30</div><div class="day-act" style="--cat:#2E7CF6;--tagbg:#EAF3FF;"><b>AI · 영어 · SEL · 미술 활동</b><span class="day-tag">메인 활동</span></div></div>
       <div class="day-row"><div class="day-time">15:30 – 17:00</div><div class="day-act" style="--cat:#2E7CF6;--tagbg:#EAF3FF;"><b>AI · 영어 · SEL · 미술 활동</b><span class="day-tag">메인 활동</span></div></div>
       <div class="day-row"><div class="day-time">17:00 – 18:30</div><div class="day-act" style="--cat:#2E7CF6;--tagbg:#EAF3FF;"><b>AI · 영어 · SEL · 미술 활동</b><span class="day-tag">메인 활동</span></div></div>
@@ -1102,13 +1105,11 @@ footer {
     <div class="apply reveal">
       <div class="apply-eyebrow">2026 Summer · 선착순 모집</div>
       <h2>이번 여름, 아이가 스스로의 가능성을<br>발견하는 시간을 선물하세요</h2>
-      <div class="price">1,485,000원 <small>· 5주 풀 참여 기준</small></div>
-      <p class="apply-note">주차(2~5주)에 따라 차등 책정 · 최소 2주 이상 신청 가능 · 차량비 별도<br>모집 기간: 2026년 6~7월 중 선착순 접수 (정원 마감 시 조기 마감)</p>
+      <div class="price">1,485,000원 <small>· 5주 all day 참여 기준</small></div>
+      <p class="apply-note">초등부 최소 3주 이상 신청 가능 · 차량 · 점심 비용 별도<br>3~5주 · all day · 오전 프로젝트 · 오후 프로젝트 선택 가능<br>모집 기간: 2026년 6~7월 중 선착순 접수 (정원 마감 시 조기 마감)</p>
       <div class="apply-ctas">
         <a class="btn btn-sun" href="https://m.site.naver.com/29w6K" target="_blank" rel="noopener">지금 신청하기</a>
-        <a class="btn btn-line" href="https://pf.kakao.com" target="_blank" rel="noopener">카톡 FOX_LC 문의</a>
       </div>
-      <p class="apply-contact">전화 <b>1433-2700</b> · 카톡 <b>FOX_LC</b> · 골프존 조이마루 2층, 폭스러닝센터</p>
     </div>
   </div>
 </section>
